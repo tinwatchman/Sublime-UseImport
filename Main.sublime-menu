@@ -3,8 +3,8 @@
   "mnemonic": "t",
   "id": "tools",
   "children": [{
-    "id": "useimport_automapper",
-    "caption": "Use Import - Refresh Project Map",
+    "id": "useimportmenu_refresh",
+    "caption": "UseImport - Refresh Project",
     "command": "use_import_automap"
   }]
 }]

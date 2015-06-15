@@ -1,5 +1,10 @@
 [{
-  "id": "useimportjump",
-  "caption": "Jump to File (Use-Import)",
+  "id": "useimportctx_jump",
+  "caption": "Jump to File (UseImport)",
   "command": "use_import_jump"
+},
+{
+  "id": "useimportctx_refresh",
+  "caption": "Refresh Project (UseImport)",
+  "command": "use_import_automap"
 }]

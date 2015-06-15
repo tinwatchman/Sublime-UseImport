@@ -20,8 +20,6 @@ class UseImportAutomapCommand(sublime_plugin.TextCommand):
                 configpath = useutil.get_new_use_file_path(rootdir)
             else:
                 rootdir = useutil.get_root_dir(configpath)
-            print "configpath %s" % configpath
-            print "rootdir %s" % rootdir
             args = {
                 "cmd": [
                     "use-automapper",

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+/* use-automapper: ${1:className} */
+]]></content>
+    <tabTrigger>use-automapper</tabTrigger>
+    <scope>source.js</scope>
+    <description>Insert Name Comment (UseImport)</description>
+</snippet>
