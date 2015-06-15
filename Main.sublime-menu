@@ -1,0 +1,10 @@
+[{
+  "caption": "Tools",
+  "mnemonic": "t",
+  "id": "tools",
+  "children": [{
+    "id": "useimport_automapper",
+    "caption": "Use Import - Refresh Project Map",
+    "command": "use_import_automap"
+  }]
+}]

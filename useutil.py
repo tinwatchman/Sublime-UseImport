@@ -36,6 +36,12 @@ def get_abs_filepath(relative_path, use_json_path):
         return abs_path
     return False
 
+def get_root_dir(filepath):
+    return os.path.dirname(filepath)
+
+def get_new_use_file_path(rootdir):
+    return os.path.join(rootdir, 'use.json')
+
 def is_javascript_syntax(syntax):
     basenm = os.path.basename(syntax)
     m = re.search(js_syntax_pattern, basenm)
