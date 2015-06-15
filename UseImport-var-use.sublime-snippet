@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[var ${1:localName} = use('${2:className}');]]></content>
+    <tabTrigger>var</tabTrigger>
+    <scope>source.js</scope>
+    <description>use import (UseImport)</description>
+</snippet>

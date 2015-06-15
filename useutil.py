@@ -1,6 +1,6 @@
 import os, os.path, re
 
-use_pattern = re.compile('use\([\'"](?P<name>[^\'"\)]+)[\'"]\)')
+use_pattern = re.compile('\s*use\([\'"](?P<name>[^\'"\)]+)[\'"]\)')
 use_start_pattern = re.compile('\s*use\([\'"]')
 js_syntax_pattern = re.compile('JavaScript')
 

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[use('${1:className}')]]></content>
+    <tabTrigger>use</tabTrigger>
+    <scope>source.js</scope>
+    <description>use (UseImport)</description>
+</snippet>
