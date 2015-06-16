@@ -26,17 +26,15 @@ class UseImportAutomapCommand(sublime_plugin.TextCommand):
                     "use-automapper",
                     "run",
                     "--path",
-                    useutil.replace_back_slashes(rootdir),
+                    useutil.format_back_slashes(rootdir),
                     "--output",
-                    useutil.replace_back_slashes(configpath)
+                    useutil.format_back_slashes(configpath)
                 ]
             }
 
             if sublime.platform() == "osx":
                 args['path'] = "/usr/local/share/npm/bin:/usr/local/bin:/opt/local/bin"
-            elif sublime.platform() == "windows":
-                args['cmd'][0] += ".cmd"
-            
+                        
             self.view.window().run_command('exec', args)
         return
 

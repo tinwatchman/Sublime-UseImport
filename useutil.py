@@ -55,10 +55,8 @@ def is_use_start(prefix):
         return True
     return False
 
-def replace_back_slashes(path):
+def format_back_slashes(path):
     if '\\' in path:
-        print 'replace back slashes: %s' % path
-        return path.replace('\\', '/')
-    print 'no back slashes %s' % path
+        return path.replace('\\', '\\\\')
     return path
 
