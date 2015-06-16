@@ -15,6 +15,7 @@ class UseImportAutomapCommand(sublime_plugin.TextCommand):
             self.clear_preferences()
             # get use file location
             configpath = useutil.search(self.view.file_name())
+            print "configpath found: %s" % configpath
             if (configpath == False):
                 rootdir = useutil.get_root_dir(self.view.file_name())
                 configpath = useutil.get_new_use_file_path(rootdir)
@@ -25,11 +26,15 @@ class UseImportAutomapCommand(sublime_plugin.TextCommand):
                     "use-automapper",
                     "run",
                     "--path",
-                    rootdir,
+                    useutil.replace_back_slashes(rootdir),
                     "--output",
-                    configpath
+                    useutil.replace_back_slashes(configpath)
                 ]
             }
+
+            if sublime.platform() == "osx":
+                args['path'] = "/usr/local/share/npm/bin:/usr/local/bin:/opt/local/bin"
+            
             self.view.window().run_command('exec', args)
         return
 
