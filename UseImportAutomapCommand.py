@@ -34,6 +34,8 @@ class UseImportAutomapCommand(sublime_plugin.TextCommand):
 
             if sublime.platform() == "osx":
                 args['path'] = "/usr/local/share/npm/bin:/usr/local/bin:/opt/local/bin"
+            elif sublime.platform() == "windows":
+                args['cmd'][0] += ".cmd"
             
             self.view.window().run_command('exec', args)
         return
